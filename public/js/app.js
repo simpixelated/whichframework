@@ -7,29 +7,36 @@ define(function (require) {
 	var Frameworks = BB.Collection.extend({
 		url: 'learn.json',
 		parse: function (data) {
-			return _.toArray(data);
+			// remove last "templates" object in data
+			return _.initial(_.toArray(data));
 		}
 	});
 
 	var FrameworkView = BB.View.extend({
 		template: _template,
+		prepareDataForTemplate: function (data) {
+			data.todomvc = data.examples && data.examples[0].url;
+			return data;
+		},
 		render: function () {
-			this.$el.html(this.template(this.model.attributes));
+			var data = this.prepareDataForTemplate(this.model.attributes);
+			this.$el.html(this.template(data));
 			return this;
 		}
 	});
 
     return {
     	start: function () {
-    		var frameworks = new Frameworks(),
-    			view;
+    		var frameworks = new Frameworks();
 
-    		frameworks.fetch().done(function (response) {
-    			var random = _.random(0, frameworks.length),
-    				framework = frameworks.at(random);
+    		frameworks.fetch({
+    			success: function (collection) {
+    				var random = _.random(0, collection.length-1),
+	    				framework = collection.at(random),
+	    				view = new FrameworkView({ model: framework });
 
-    			view = new FrameworkView({ model: framework });
-    			$('#main').html(view.render().el);
+	    			$('#main').html(view.render().el);
+    			}
     		});
     		
     	}
