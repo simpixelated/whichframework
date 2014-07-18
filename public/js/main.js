@@ -6,6 +6,8 @@ require.config({
 		jquery: '//code.jquery.com/jquery-2.0.3.min',
 		marionette: '//cdnjs.cloudflare.com/ajax/libs/backbone.marionette/1.4.0-bundled/backbone.marionette.min',
 		handlebars: '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min',
+		hbars: '//cdnjs.cloudflare.com/ajax/libs/requirejs-handlebars/0.0.2/hbars',
+		text: '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
 		foundation: '//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min',
 		templates: '../templates'
 	},
@@ -28,6 +30,9 @@ require.config({
 	map: {
 		'backbone': {
 			'underscore': 'lodash'
+		},
+		'hbars': {
+			'Handlebars': 'handlebars'
 		}
 	}
 });

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Fram",
+				"FrameworkView"
+			],
+			[
 				"player",
 				"playerGrowthView"
 			],
@@ -187,7 +191,15 @@
 			"file": "public/js/app.js",
 			"settings":
 			{
-				"buffer_size": 494,
+				"buffer_size": 849,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 898,
 				"line_ending": "Unix"
 			}
 		},
@@ -579,15 +591,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 494,
+						"buffer_size": 849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								490,
-								490
+								356,
+								356
 							]
 						],
 						"settings":
@@ -603,6 +615,36 @@
 				},
 				{
 					"buffer": 1,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "public/learn.json",
 					"semi_transient": false,
 					"settings":
@@ -684,6 +726,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"public/index.html"
+			],
 			[
 				"overrides",
 				"static/css/design-layouts/roar/overrides.css"
@@ -1191,10 +1237,6 @@
 			[
 				"contentse",
 				"static/js/whitelabel/widgets/views/edit_mode/content_section.js"
-			],
-			[
-				"giphys",
-				"static/js/whitelabel/widgets/collections/giphy_search_api.js"
 			]
 		],
 		"width": 0.0

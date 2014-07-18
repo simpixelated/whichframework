@@ -1,7 +1,8 @@
 define(function (require) {
 	var BB = require('backbone'),
 		_ = require('lodash'),
-		$ = require('jquery');
+		$ = require('jquery'),
+		_template = require('hbars!templates/framework');
 
 	var Frameworks = BB.Collection.extend({
 		url: 'learn.json',
@@ -11,9 +12,7 @@ define(function (require) {
 	});
 
 	var FrameworkView = BB.View.extend({
-		template: function (data) {
-			return '<a href="//'+data.homepage+'">'+data.name+'</a>';
-		},
+		template: _template,
 		render: function () {
 			this.$el.html(this.template(this.model.attributes));
 			return this;
