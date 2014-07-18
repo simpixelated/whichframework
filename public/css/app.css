@@ -32,6 +32,22 @@ blockquote {
 	border: none;
 }
 
+a {
+	color: #DA771D;
+}
+
+a:hover,
+a:focus {
+	color: #E77F20;
+}
+
 .todomvc {
 	width: 100px;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+.todomvc:hover,
+.todomvc:focus {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }
