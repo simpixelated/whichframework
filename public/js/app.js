@@ -15,7 +15,11 @@ define(function (require) {
 	var FrameworkView = BB.View.extend({
 		template: _template,
 		prepareDataForTemplate: function (data) {
-			data.todomvc = data.examples && data.examples[0].url;
+			// limit character length for better design
+			if (data.description.length > 150) {
+				data.description = data.description.substring(0,150);
+				data.description += '...';
+			}
 			return data;
 		},
 		render: function () {

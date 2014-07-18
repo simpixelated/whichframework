@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
+body {
+	background: url('../img/unsplash_52b5ec8515a34_1.JPG') 0 0 no-repeat;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#main {
+	margin-top: 5%;
+}
+
+h1,
+h5.subheader {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h3 em,
+blockquote,
+p em {
+	font-family: 'Gentium Book Basic', serif;
+}
+
+h1 {
+	font-size: 3.5rem;
+	line-height: 1;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+blockquote {
+	border: none;
+}
+
+.todomvc {
+	width: 100px;
+}

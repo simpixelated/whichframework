@@ -8,7 +8,7 @@ require.config({
 		handlebars: '//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min',
 		hbars: '//cdnjs.cloudflare.com/ajax/libs/requirejs-handlebars/0.0.2/hbars',
 		text: '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
-		foundation: '//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation.min',
+		foundation: '//cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.3.1/js/foundation.min',
 		templates: '../templates'
 	},
 	shim: {

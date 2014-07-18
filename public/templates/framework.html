@@ -1,2 +1,24 @@
-<p><a href="//{{homepage}}">{{name}}</a>: {{description}}</p>
-<p><a href="//todomvc.com/{{todomvc}}">todomvc example</a></p>
+<div class="row">
+	<div class="small-6 small-centered columns">
+		<h3 class="text-center"><em>Just learn the everloving shit out of</em></h3>
+	</div>
+</div>
+<h1 class="text-center"><strong><a href="//{{homepage}}">{{name}}!</a></strong></h1>
+<div class="row">
+	<div class="small-6 small-centered columns text-center">
+		<blockquote class="text-left">{{description}}</blockquote>
+		{{#each examples}}
+		{{#if @first}}
+			<p><em>Example code on:</em><br>
+			<a href="//todomvc.com/{{url}}"><img src="img/todomvc_logo.png" class="todomvc"></a></p>
+		{{/if}}
+		{{/each}}
+		<hr>
+		<div class="row">
+			<div class="small-11 small-centered columns">
+				<p><em>There is no best framework. Just write your damn software.</em></p>
+				<h5 class="subheader">Stop <a href="https://en.wiktionary.org/wiki/yak_shaving">yak shaving</a>.</h5>
+			</div>
+		</div>
+	</div>
+</div>
