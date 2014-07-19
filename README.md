@@ -9,8 +9,8 @@ random JavaScript MV* picker
 >When you’re given too much choice you can also end up increasing your expectations. Maybe you feel that if you hold out, you’ll find the ‘best’ one. The unicorn in the herd. Clearly, with so many options to choose from, the correct choice must be amazing. Often, however, on discovery of what the ‘correct’ choice is like we can feel unfulfilled. Such high expectations are difficult to meet, leaving us in a state of unquenchable dissatisfaction.
 >
 >JavaScript has “Yet another framework syndrome” (how many solutions do we have for MVC, template rendering or data-binding?)
-
-- [Addy Osmani](https://the-pastry-box-project.net/addy-osmani/2014-January-19)
+>
+> [Addy Osmani](https://the-pastry-box-project.net/addy-osmani/2014-January-19)
 
 More References:
 * http://en.wikipedia.org/wiki/Analysis_paralysis
