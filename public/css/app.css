@@ -45,9 +45,12 @@ a:focus {
 	width: 100px;
 	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
+	opacity: .5;
+	-webkit-transition: .3s;
 }
 .todomvc:hover,
 .todomvc:focus {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
+	opacity: 1;
 }
