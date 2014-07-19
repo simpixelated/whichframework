@@ -40,7 +40,7 @@ define(function (require) {
 		},
 		reloadClick: function(e) {
 			e.preventDefault();
-			document.location.reload();
+			this.collection.fetch();
 		},
 		render: function () {
 			this.$el.text('try again');
@@ -52,18 +52,16 @@ define(function (require) {
     	start: function () {
     		var frameworks = new Frameworks();
 
-    		frameworks.fetch({
-    			success: function (collection) {
-    				var random = _.random(0, collection.length-1),
-	    				framework = collection.at(random),
-	    				view = new FrameworkView({ model: framework }),
-	    				button = new ReloadButtonView();
+    		frameworks.on('sync', function (collection) {
+    			var random = _.random(0, collection.length-1),
+    				framework = collection.at(random),
+    				view = new FrameworkView({ model: framework }),
+    				button = new ReloadButtonView({ collection: collection });
 
-	    			$('#main').html(view.render().el);
-	    			$('body').append(button.render().el);
-    			}
+    			$('#main').html(view.render().el);
+    			$('body').append(button.render().el);
     		});
-    		
+    		frameworks.fetch();
     	}
     };
 });
