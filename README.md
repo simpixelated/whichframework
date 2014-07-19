@@ -1,8 +1,7 @@
-whichframework
+Which JavaScript framework should I learn?
 ==============
 
-random JavaScript MV* picker
-
+To quote The Rock, it doesn't matter!!
 
 >The challenge is that when presented with an abundance of choice, you can feel increasingly unsure of whether yours is the right one. Instead of being happy with our decisions, we’re filled with anxiety. Did I pick the wrong one? Would I have been better off with something else? What would my friends have used? Should I ask them? I don’t want to seem stupid. We’re stuck in a rut pondering whether we’ve missed an opportunity for something better. How many times have you second-guessed your technology stack?
 >
