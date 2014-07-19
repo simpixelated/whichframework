@@ -50,17 +50,19 @@ define(function (require) {
 
     return {
     	start: function () {
-    		var frameworks = new Frameworks();
+    		var frameworks = new Frameworks(),
+    			button = new ReloadButtonView({ collection: frameworks });
 
     		frameworks.on('sync', function (collection) {
     			var random = _.random(0, collection.length-1),
     				framework = collection.at(random),
-    				view = new FrameworkView({ model: framework }),
-    				button = new ReloadButtonView({ collection: collection });
+    				view = new FrameworkView({ model: framework });
 
     			$('#main').html(view.render().el);
-    			$('body').append(button.render().el);
+    			$('.reload').show();
     		});
+    		
+    		$('body').append(button.render().el);
     		frameworks.fetch();
     	}
     };
