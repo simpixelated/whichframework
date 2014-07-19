@@ -12,6 +12,7 @@ To quote The Rock, it doesn't matter!!
 > [Addy Osmani](https://the-pastry-box-project.net/addy-osmani/2014-January-19)
 
 More References:
+* http://blog.tastejs.com/yet-another-framework-syndrome-yafs
 * http://en.wikipedia.org/wiki/Analysis_paralysis
 * https://en.wiktionary.org/wiki/yak_shaving
 * https://news.ycombinator.com/item?id=7600875
