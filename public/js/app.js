@@ -32,7 +32,7 @@ define(function (require) {
 	var ReloadButtonView = BB.View.extend({
 		tagName: 'a',
 		attributes: {
-			class: 'button tiny',
+			class: 'button tiny reload',
 			href: '#'
 		},
 		events: {

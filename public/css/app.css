@@ -50,6 +50,12 @@ a:focus {
 	background-color: #E77F20;
 }
 
+.reload {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .todomvc {
 	width: 100px;
 	-webkit-filter: grayscale(1);
