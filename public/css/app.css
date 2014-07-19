@@ -54,3 +54,18 @@ a:focus {
 	filter: grayscale(0);
 	opacity: 1;
 }
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	height: 2.85rem;
+	width: 100%;
+	padding-top: 0.7rem;
+}
+
+footer p {
+	margin-bottom: 0;
+}
