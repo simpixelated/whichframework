@@ -41,12 +41,21 @@ a:focus {
 	color: #E77F20;
 }
 
+.button {
+	background-color: #DA771D;
+}
+
+.button:hover,
+.button:focus {
+	background-color: #E77F20;
+}
+
 .todomvc {
 	width: 100px;
 	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 	opacity: .5;
-	-webkit-transition: .3s;
+	transition: .3s;
 }
 .todomvc:hover,
 .todomvc:focus {

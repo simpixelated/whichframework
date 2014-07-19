@@ -29,6 +29,25 @@ define(function (require) {
 		}
 	});
 
+	var ReloadButtonView = BB.View.extend({
+		tagName: 'a',
+		attributes: {
+			class: 'button tiny',
+			href: '#'
+		},
+		events: {
+			'click': 'reloadClick'
+		},
+		reloadClick: function(e) {
+			e.preventDefault();
+			document.location.reload();
+		},
+		render: function () {
+			this.$el.text('try again');
+			return this;
+		}
+	});
+
     return {
     	start: function () {
     		var frameworks = new Frameworks();
@@ -37,9 +56,11 @@ define(function (require) {
     			success: function (collection) {
     				var random = _.random(0, collection.length-1),
 	    				framework = collection.at(random),
-	    				view = new FrameworkView({ model: framework });
+	    				view = new FrameworkView({ model: framework }),
+	    				button = new ReloadButtonView();
 
 	    			$('#main').html(view.render().el);
+	    			$('body').append(button.render().el);
     			}
     		});
     		
