@@ -8,9 +8,9 @@
         response.sendfile('./public/index.html');
     });
      
-    if (typeof NODE_ENV === 'undefined') {
-    	app.listen(3000);
-    } else if (NODE_ENV === 'production') {
+    if (process && process.env && process.env.PORT) {
     	app.listen(process.env.PORT);
+    } else {
+    	app.listen(3000);
     }
 })();
