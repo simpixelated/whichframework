@@ -53,6 +53,7 @@ define(function (require) {
     		var frameworks = new Frameworks(),
     			button = new ReloadButtonView({ collection: frameworks });
 
+    		this.setupAnalytics();
     		frameworks.on('sync', function (collection) {
     			var random = _.random(0, collection.length-1),
     				framework = collection.at(random),
@@ -60,19 +61,22 @@ define(function (require) {
 
     			$('#main').html(view.render().el);
     			$('.reload').show();
-    		});
-    		
+    			this.trackPageView(framework.get('name'));
+    			
+    		}, this);
+
     		$('body').append(button.render().el);
     		frameworks.fetch();
-    		this.analytics();
     	},
-		analytics: function () {
+		setupAnalytics: function () {
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+		},
+		trackPageView: function (framework) {
 			ga('create', 'UA-4495054-15', 'auto');
+			ga('set', 'dimension1', framework);
 			ga('send', 'pageview');
 		}
     };
